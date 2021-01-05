@@ -9,12 +9,6 @@ output:
     toc: yes
     toc_depth: 3
     toc_float: yes
-  pdf_document:
-    toc: yes
-    toc_depth: '3'
-  word_document:
-    toc: yes
-    toc_depth: '3'
 ---
 
 ```{r setup, include=FALSE, eval=FALSE}
@@ -423,7 +417,7 @@ library(showtext)
 font_add_google("Playfair Display",
                 "Playfair") 
 
-font_add_google("Bangers", "Bangers")
+font_add_google("Playfair Display", "Playfair Display")
 ```
 
 Now, we can use those font families using: ...... `theme()`:
