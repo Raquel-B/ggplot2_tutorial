@@ -422,17 +422,20 @@ font_add_google("Playfair Display", "Playfair Display")
 
 Now, we can use those font families using: ...... `theme()`:
 
-```{r eval=FALSE} 
+```{r use_theme_for_font_families} 
+#Error in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : polygon edge not found
 ggplot(chic, aes(x = date, y = temp)) +
   geom_point(color = "firebrick") +
   labs(x = "Year", y = "Temperature (°F)",
        title = "Temperatures in Chicago",
        subtitle = "Daily temperatures in °F from 1997 to 2001") +
-  theme(plot.title = element_text(family = "Bangers", hjust = .5, size = 10),
+  theme(plot.title = element_text(family = "Playfair Display", hjust = .5, size = 10),
         plot.subtitle = element_text(family = "Playfair", hjust = .5, size = 5))
 ```
 
 ```{r roboto_font}
+# I don't get any error here 
+
 font_add_google("Roboto Condensed", "Roboto Condensed")
 theme_set(theme_bw(base_size = 12, base_family = "Roboto Condensed"))
 ```
